@@ -205,11 +205,14 @@ if __name__ == "__main__":
     else:
         ssl_context = None
 
+
+
+    port = int(os.environ.get("PORT", 5000))
     app = web.Application()
     app.on_shutdown.append(on_shutdown)
     app.router.add_get("/", index)
     app.router.add_get("/client.js", javascript)
     app.router.add_post("/offer", offer)
     web.run_app(
-        app, access_log=None, host=args.host, port=args.port, ssl_context=ssl_context
+        app, access_log=None, host=args.host, port=port, ssl_context=ssl_context
     )
