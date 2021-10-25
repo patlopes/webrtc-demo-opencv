@@ -61,7 +61,6 @@ QDarkStyle==2.8.1
 QtPy==1.9.0
 scikit-image==0.18.1
 simplegeneric==0.8.1
-sip==4.19.13
 tables==3.6.1
 terminado==0.9.4
 tifffile==2020.10.1
